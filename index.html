@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ritik.css">
+    <link rel="stylesheet" href="utility.css">
+    <title>Spotify - Web Player: Music For Everyone</title>
+</head>
+<body>
+    <div class="container flex bg-black">
+        <div class="left">
+            <div class="home bg-grey rounded m-1 p-1">
+                <ul>
+                    <li><img class="invert" src="logo.svg" alt=""></li>
+                    <li><img class="invert" src="home.svg" alt="home"> Home</li>
+                    <li><img class="invert" src="search.svg" alt="search">Search</li>
+                </ul>
+            </div>
+            <div class="library bg-grey rounded m-1 p-1">
+                <div class="heading">
+                    <img class="invert" src="playlist.svg" alt="">
+                    <h2>Your library</h2>
+                </div>
+                <div class="songList">
+                    <ul>
+                        <li class="song-item">
+                            <img src="music.svg" alt="Song Icon" class="invert song-icon">
+                            <div class="info">
+                                <div class="song-name">Song Name</div>
+                            </div>
+                             <div class="playnow">
+                                <span>Play Now</span>
+                                <img class="invert play-icon" src="play.svg" alt="Play Icon">
+                            </div>
+                        </li>
+                        <li class="no-songs">
+                            <span>No songs available</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="right bg-grey rounded">
+            <div class="header">
+                <div class="nav">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 6L9.70711 11.2929C9.37377 11.6262 9.20711 11.7929 9.20711 12C9.20711 12.2071 9.37377 12.3738 9.70711 12.7071L15 18" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L14.2929 12.7071C14.6262 12.3738 14.7929 12.2071 14.7929 12C14.7929 11.7929 14.6262 11.6262 14.2929 11.2929L9 6" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="buttons">
+                    <button class="signupbtn">Sign up</button>
+                    <button class="loginbtn">Log in</button>
+                </div>
+            </div>
+
+            <div class="spotify-playlists">
+                <h1>Spotify Playlists</h1>
+                <div class="cardContainer">
+                    <div class="card">
+                        <img src="https://th.bing.com/th/id/OIP._DKIdOXBtRJilTUTYMYgfwHaEY?rs=1&pid=ImgDetMain">
+                        <h2>Happy hits</h2>
+                        <p>Hits to boost your mood and fill with happiness!</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="https://i.ytimg.com/vi/t4PvZw7R2Ns/maxresdefault.jpg">
+                        <h2>Song for u</h2>
+                        <p>Hits to boost your mood and fill with happiness!</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://i.ytimg.com/vi/t4PvZw7R2Ns/maxresdefault.jpg">
+                        <h2>Song for u</h2>
+                        <p>Hits to boost your mood and fill with happiness!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Playbar with Seek Bar and Play/Pause Button -->
+    <footer class="playbar">
+        <div class="songbuttons">
+            <button id="prev-btn" class="control-btn">
+                <img src="prevsong.svg" alt="Previous">
+            </button>
+            <button id="play-btn" class="control-btn">
+                <img src="play.svg" alt="Play">
+                <img src="pause.svg" alt="Pause">
+            </button>
+            <button id="next-btn" class="control-btn">
+                <img style="background-color: inherit;" src="nextsong.svg" alt="Next">
+            </button>
+        </div>
+        <input type="range" id="seek-bar" class="seek-bar" value="0" step="1" min="0" max="100">
+        <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+    </footer>
+
+    <script src="ritik.js"></script>
+</body>
+</html>
